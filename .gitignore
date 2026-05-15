@@ -6,9 +6,11 @@
 [Ll]ogs/
 UserSettings/
 
+# Visual Studio / Unity generated
 *.csproj
 *.unityproj
 *.sln
+*.slnx
 *.user
 *.userprefs
 
