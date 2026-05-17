@@ -1950,6 +1950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c82589afe9b6c4dc483f7823b75b6124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewEmptyCSharpScript
+  shootSound: {fileID: 8300000, guid: 2a16670a37b4b4023bd11bdd7233acfa, type: 3}
 --- !u!1 &1225348665
 GameObject:
   m_ObjectHideFlags: 0
