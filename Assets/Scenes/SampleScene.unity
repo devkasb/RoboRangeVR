@@ -245,8 +245,9 @@ GameObject:
   - component: {fileID: 249967296}
   - component: {fileID: 249967295}
   - component: {fileID: 249967294}
+  - component: {fileID: 249967298}
   m_Layer: 0
-  m_Name: FlyingBlocker_right
+  m_Name: FlyingObstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -298,7 +299,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: b34b07a45ba63ce47896c9e674f3a7a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -345,6 +346,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &249967298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249967293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d1c2a39fe014408a958c9bb75bbfcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObsticalFlying
+  speed: 0
+  height: 0
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +610,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 483440478}
+  - component: {fileID: 483440479}
   m_Layer: 0
   m_Name: TargetSpawner
   m_TagString: Untagged
@@ -617,6 +633,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &483440479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483440477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d353054af4892466d8a6646668d2e075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TargetSpawner
+  spawnPoints:
+  - {fileID: 2025768942}
+  - {fileID: 1379823879}
+  - {fileID: 1038980130}
+  - {fileID: 1961159744}
+  targetPrefabs:
+  - {fileID: 5411845975573479189, guid: b7b8c91be60134582b1eef159e60d05a, type: 3}
+  - {fileID: 1513481735198809586, guid: 14c80205ff73f4d94aeeec98588e4e8c, type: 3}
+  spawnInterval: 0.5
+  randomScale: 0
+  randomHeight: 0
 --- !u!1 &673312901
 GameObject:
   m_ObjectHideFlags: 0

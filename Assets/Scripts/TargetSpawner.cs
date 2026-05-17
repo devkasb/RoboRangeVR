@@ -31,7 +31,7 @@ public class TargetSpawner : MonoBehaviour
             direction = Vector3.left;
         }
 
-        randomScale = Random.Range(0.5f, 3f);
+        randomScale = Random.Range(0.5f, 2f);
         randomHeight = Random.Range(1f, 4f);
 
         Vector3 spawnPosition = spawnPoint.position;
