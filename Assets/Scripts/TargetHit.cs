@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class TargetHit : MonoBehaviour
 {
+
+    private ScoreManager scoreManager;
+
+    void Start()
+    {
+        scoreManager = FindAnyObjectByType<ScoreManager>();
+    }
     public void Hit()
     {
-        ScoreManager scoreManager = FindFirstObjectByType<ScoreManager>();
-
         if (scoreManager != null)
         {
             scoreManager.AddScore(1);

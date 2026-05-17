@@ -1,12 +1,19 @@
 using UnityEngine;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    public int score = 0;
+    public TextMeshProUGUI scoreValueText;
+    private int score = 0;
 
     public void AddScore(int points)
     {
         score += points;
-        Debug.Log("Score: " + score);
+        scoreValueText.text = score.ToString();
+    }
+
+    void Start()
+    {
+        AddScore(0);
     }
 }
