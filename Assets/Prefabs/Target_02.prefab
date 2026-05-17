@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5906985739572147338}
   - component: {fileID: 3931555711588094504}
   - component: {fileID: -391771822960920127}
+  - component: {fileID: -1603007476446262366}
   m_Layer: 0
   m_Name: Target_02
   m_TagString: Untagged
@@ -128,3 +129,15 @@ MonoBehaviour:
   speed: 0
   direction: {x: 0, y: 0, z: 0}
   destroyXLimit: 15
+--- !u!114 &-1603007476446262366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513481735198809586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f85a080a5d7449dbc3e545cf8a0759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TargetHit
