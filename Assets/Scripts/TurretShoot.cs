@@ -2,18 +2,41 @@ using UnityEngine;
 
 public class TurretShoot : MonoBehaviour
 {
-    public Vector3 playerPosition;
+    public GameObject projectilePrefab;
+    public Transform firePoint;
+
+    public float shootInterval = 2f;
 
     void Start()
     {
-        playerPosition = Camera.main.transform.position;
+        InvokeRepeating(nameof(ShootProjectile), 1f, shootInterval);
     }
-    
-    void shootProjectile()
+
+    void ShootProjectile()
     {
-        if (playerPosition != null)
+        if (projectilePrefab == null || firePoint == null)
         {
-            GetComponent<TurretProjectile>();
+            return;
+        }
+
+        // aktuelle player position
+        Vector3 playerPosition = Camera.main.transform.position;
+
+        // calculate direction
+        Vector3 direction = (playerPosition - firePoint.position).normalized;
+
+        // spawn projectile prefab
+        GameObject projectile = Instantiate(
+            projectilePrefab,
+            firePoint.position,
+            Quaternion.identity
+        );
+
+        TurretProjectile projec = projectile.GetComponent<TurretProjectile>();
+
+        if (projec != null)
+        {
+            projec.direction = direction;
         }
     }
 }
