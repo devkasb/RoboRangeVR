@@ -5,14 +5,7 @@ public class TurretShoot : MonoBehaviour
     public GameObject projectilePrefab;
     public Transform firePoint;
 
-    public float shootInterval = 2f;
-
-    public void StartShooting()
-    {
-        InvokeRepeating(nameof(ShootProjectile), 1f, shootInterval);
-    }
-
-    void ShootProjectile()
+    public void ShootProjectile()
     {
         if (projectilePrefab == null || firePoint == null)
         {
@@ -21,7 +14,6 @@ public class TurretShoot : MonoBehaviour
 
         // aktuelle player position
         Vector3 playerPosition = Camera.main.transform.position;
-
         // calculate direction
         Vector3 direction = (playerPosition - firePoint.position).normalized;
 
@@ -32,11 +24,11 @@ public class TurretShoot : MonoBehaviour
             Quaternion.identity
         );
 
-        TurretProjectile projec = projectile.GetComponent<TurretProjectile>();
+        TurretProjectile p = projectile.GetComponent<TurretProjectile>();
 
-        if (projec != null)
+        if (p != null)
         {
-            projec.direction = direction;
+            p.direction = direction;
         }
     }
 }

@@ -19,7 +19,7 @@ public class DebugShooter : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                Debug.Log("Getroffen: " + hit.collider.gameObject.name);
+                Debug.Log("Hit: " + hit.collider.gameObject.name);
                 
                 StartGame startGame = hit.collider.GetComponent<StartGame>();
 
