@@ -9,10 +9,10 @@ public class TargetSpawner : MonoBehaviour
     public float randomScale;
     public float randomHeight;
 
-    void Start()
+    public void StartSpawning()
     {
         InvokeRepeating(nameof(SpawnTarget), 1f, spawnInterval);
-    }
+    } 
 
     void SpawnTarget()
     {

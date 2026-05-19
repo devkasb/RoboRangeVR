@@ -21,6 +21,13 @@ public class DebugShooter : MonoBehaviour
             {
                 Debug.Log("Getroffen: " + hit.collider.gameObject.name);
                 
+                StartGame startGame = hit.collider.GetComponent<StartGame>();
+
+                if (startGame != null)
+                {
+                    startGame.Hit();
+                }
+
                 TargetHit target = hit.collider.GetComponent<TargetHit>();
 
                 if (target != null)

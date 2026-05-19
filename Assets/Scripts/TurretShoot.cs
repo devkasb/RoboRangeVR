@@ -7,7 +7,7 @@ public class TurretShoot : MonoBehaviour
 
     public float shootInterval = 2f;
 
-    void Start()
+    public void StartShooting()
     {
         InvokeRepeating(nameof(ShootProjectile), 1f, shootInterval);
     }
