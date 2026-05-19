@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -22,6 +23,13 @@ public class VRControllerShooter : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 Debug.Log("Hit: " + hit.collider.gameObject.name);
+
+                StartGame startGame = hit.collider.GetComponent<StartGame>();
+
+                if (startGame != null)
+                {
+                    startGame.Hit();
+                }
 
                 TargetHit target = hit.collider.GetComponent<TargetHit>();
 
