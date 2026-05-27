@@ -1153,6 +1153,7 @@ MonoBehaviour:
   turrets:
   - {fileID: 658727931}
   - {fileID: 860399020}
+  gameOverText: {fileID: 0}
   turretShootInterval: 2
 --- !u!4 &504215712
 Transform:
@@ -3225,6 +3226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   maxHealth: 3
+  gameManager: {fileID: 504215711}
   healthFill: {fileID: 508477052}
 --- !u!1 &1225348665
 GameObject:

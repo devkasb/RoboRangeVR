@@ -4,6 +4,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 3;
     private int currentHealth;
+    public GameManager gameManager;
     public Transform healthFill;
     private Vector3 initialScale;
 
@@ -23,10 +24,20 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= amount;
 
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
             currentHealth = 0;
+            Debug.Log("Calling GameOver");
+
+            if (gameManager != null)
+            {
+                gameManager.GameOver();
+            } else
+            {
+                Debug.Log("GameManager missing in PlayerHealth");
+            }
         }
+
 
         UpdateHealthDisplay();
 

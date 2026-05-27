@@ -52,4 +52,10 @@ public class TargetSpawner : MonoBehaviour
         TargetMovement movement = spawnedTarget.GetComponent<TargetMovement>();
         movement.direction = direction;
     }
+
+    public void StopSpawning()
+    {
+        Debug.Log("StopSpawning reached");
+        CancelInvoke(nameof(SpawnTarget));
+    }
 }

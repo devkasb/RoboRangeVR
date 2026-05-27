@@ -5,6 +5,8 @@ public class GameManager : MonoBehaviour
     public TargetSpawner targetSpawner;
     public TurretShoot[] turrets;
 
+    public GameObject gameOverText;
+
     public float turretShootInterval = 2f;
     private bool gameStarted = false;
 
@@ -36,5 +38,26 @@ public class GameManager : MonoBehaviour
 
         int randomIndex = Random.Range(0, turrets.Length);
         turrets[randomIndex].ShootProjectile();
+    }
+
+    public void GameOver()
+    {
+        Debug.Log("GameOver reached");
+
+        CancelInvoke(nameof(ShootRandomTurret));
+
+        if (targetSpawner != null)
+        {
+            targetSpawner.StopSpawning();
+        }
+        else
+        {
+            Debug.Log("TargetSpawner missing in GameManager");
+        }
+
+        if (gameOverText != null)
+        {
+            gameOverText.SetActive(true);
+        }
     }
 }
