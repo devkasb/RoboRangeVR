@@ -1,9 +1,11 @@
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public TargetSpawner targetSpawner;
     public TurretShoot[] turrets;
+    public Transform activeProjectileParent;
 
     public GameObject gameOverText;
 
@@ -45,6 +47,11 @@ public class GameManager : MonoBehaviour
         Debug.Log("GameOver reached");
 
         CancelInvoke(nameof(ShootRandomTurret));
+
+        foreach (Transform child in activeProjectileParent)
+        {
+            Destroy(child.gameObject);
+        }
 
         if (targetSpawner != null)
         {

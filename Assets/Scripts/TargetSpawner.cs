@@ -5,6 +5,7 @@ public class TargetSpawner : MonoBehaviour
 {
     public Transform[] spawnPoints;
     public GameObject[] targetPrefabs;
+    public Transform activeTargetsParent;
     public float spawnInterval = 0.5f;
     public float randomScale;
     public float randomHeight;
@@ -40,7 +41,8 @@ public class TargetSpawner : MonoBehaviour
         GameObject spawnedTarget = Instantiate(
             selectedTarget,
             spawnPosition,
-            spawnPoint.rotation
+            spawnPoint.rotation,
+            activeTargetsParent
         );
 
         spawnedTarget.transform.localScale = new Vector3 (
@@ -57,5 +59,10 @@ public class TargetSpawner : MonoBehaviour
     {
         Debug.Log("StopSpawning reached");
         CancelInvoke(nameof(SpawnTarget));
+
+        foreach (Transform child in activeTargetsParent)
+        {
+            Destroy(child.gameObject);
+        }
     }
 }

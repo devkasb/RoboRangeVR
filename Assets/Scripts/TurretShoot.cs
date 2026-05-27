@@ -4,6 +4,7 @@ public class TurretShoot : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public Transform firePoint;
+    public Transform activeProjectileParent;
 
     public void ShootProjectile()
     {
@@ -21,7 +22,8 @@ public class TurretShoot : MonoBehaviour
         GameObject projectile = Instantiate(
             projectilePrefab,
             firePoint.position,
-            Quaternion.identity
+            Quaternion.identity,
+            activeProjectileParent
         );
 
         TurretProjectile p = projectile.GetComponent<TurretProjectile>();
