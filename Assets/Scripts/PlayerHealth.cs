@@ -5,6 +5,7 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 3;
     private int currentHealth;
     public GameManager gameManager;
+    public AudioClip damageSound;
     public Transform healthFill;
     private Vector3 initialScale;
 
@@ -23,6 +24,14 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
+
+        if (damageSound != null)
+        {
+            AudioSource.PlayClipAtPoint(
+                damageSound,
+                transform.position
+            );
+        }
 
         if (currentHealth <= 0)
         {
