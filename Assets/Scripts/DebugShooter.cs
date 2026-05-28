@@ -34,6 +34,13 @@ public class DebugShooter : MonoBehaviour
                 {
                     target.Hit();
                 }
+
+                ResetGame resetGame = hit.collider.GetComponent<ResetGame>();
+
+                if (resetGame != null)
+                {
+                    resetGame.Hit();
+                }
             }
         }
     }

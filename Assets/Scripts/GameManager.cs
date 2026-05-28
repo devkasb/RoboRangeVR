@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public Transform activeProjectileParent;
 
     public GameObject gameOverText;
+    public GameObject resetButton;
 
     public float turretShootInterval = 2f;
     private bool gameStarted = false;
@@ -65,6 +66,11 @@ public class GameManager : MonoBehaviour
         if (gameOverText != null)
         {
             gameOverText.SetActive(true);
+        }
+
+        if (resetButton != null)
+        {
+            resetButton.SetActive(true);
         }
     }
 }

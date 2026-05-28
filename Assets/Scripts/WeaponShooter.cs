@@ -41,6 +41,13 @@ public class WeaponShooter : MonoBehaviour
             {
                 startGame.Hit();
             }
+
+            ResetGame resetGame = hit.collider.GetComponent<ResetGame>();
+
+            if (resetGame != null)
+            {
+                resetGame.Hit();
+            }
         }
     }
 }

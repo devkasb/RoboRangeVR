@@ -1188,6 +1188,7 @@ MonoBehaviour:
   - {fileID: 860399020}
   activeProjectileParent: {fileID: 1285345441}
   gameOverText: {fileID: 368449005}
+  resetButton: {fileID: 1998107294}
   turretShootInterval: 2
 --- !u!4 &504215712
 Transform:
@@ -2978,6 +2979,7 @@ GameObject:
   - component: {fileID: 1149679785}
   - component: {fileID: 1149679784}
   - component: {fileID: 1149679783}
+  - component: {fileID: 1149679787}
   m_Layer: 0
   m_Name: ResetCube
   m_TagString: Untagged
@@ -3013,7 +3015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33eb4c12460a446469924fcde1bd3da2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartGame
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 504215711}
 --- !u!65 &1149679784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3092,6 +3094,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149679781}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1149679787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149679781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e64ca9ce8324586a8cee44ec26c94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResetGame
 --- !u!1 &1171845162
 GameObject:
   m_ObjectHideFlags: 0
@@ -5601,7 +5615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1998107295
 Transform:
   m_ObjectHideFlags: 0
