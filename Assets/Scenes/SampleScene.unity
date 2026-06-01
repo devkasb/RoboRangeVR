@@ -3137,6 +3137,7 @@ GameObject:
   - component: {fileID: 1171845168}
   - component: {fileID: 1171845169}
   - component: {fileID: 1171845170}
+  - component: {fileID: 1171845171}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3421,6 +3422,20 @@ MonoBehaviour:
   gameManager: {fileID: 504215711}
   damageSound: {fileID: 8300000, guid: d50016cee6fcd4d7f82e5e74c9bf2288, type: 3}
   healthFill: {fileID: 508477052}
+--- !u!114 &1171845171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171845162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d44efebdba74fb9951a80bee00a2f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DebugPlayerLook
+  playerBody: {fileID: 673312904}
+  mouseSensitivity: 1.5
 --- !u!1 &1225348665
 GameObject:
   m_ObjectHideFlags: 0
