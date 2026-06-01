@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class DebugPlayerLook : MonoBehaviour
 {
     public Transform playerBody;
-    public float mouseSensitivity = 1.5f;
+    public float mouseSensitivity = 1f;
 
     private float xRotation = 0f;
 
