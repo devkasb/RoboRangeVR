@@ -1369,8 +1369,7 @@ MonoBehaviour:
   - {fileID: 1038980130}
   - {fileID: 1961159744}
   targetPrefabs:
-  - {fileID: 5411845975573479189, guid: b7b8c91be60134582b1eef159e60d05a, type: 3}
-  - {fileID: 1513481735198809586, guid: 14c80205ff73f4d94aeeec98588e4e8c, type: 3}
+  - {fileID: 5647464549609642012, guid: 64aa6d8101bb64c8db73a592f7e05185, type: 3}
   activeTargetsParent: {fileID: 1566724874}
   spawnInterval: 0.5
   randomScale: 0
