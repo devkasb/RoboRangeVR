@@ -45,11 +45,7 @@ public class TargetSpawner : MonoBehaviour
             activeTargetsParent
         );
 
-        spawnedTarget.transform.localScale = new Vector3 (
-            randomScale,
-            randomScale,
-            randomScale
-        );
+        spawnedTarget.transform.localScale = Vector3.one * randomScale;
 
         TargetMovement movement = spawnedTarget.GetComponent<TargetMovement>();
         movement.direction = direction;
