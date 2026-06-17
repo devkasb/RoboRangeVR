@@ -61,6 +61,13 @@ public class PlayerHealth : MonoBehaviour
         }
 
         float healthPercent = (float)currentHealth / maxHealth;
+        healthPercent = Mathf.Clamp01(healthPercent);
+
+        if (healthPercent <= 0f)
+        {
+            healthFill.gameObject.SetActive(false);
+            return;
+        }
 
         healthFill.localScale = new Vector3(
             initialScale.x,
