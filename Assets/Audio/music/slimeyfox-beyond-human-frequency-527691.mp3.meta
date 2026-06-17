@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d1bb0deafd3811444a686e80caede072
+=======
+guid: a3d5c1bcecca54d3ea4ca4957ea2d1d1
+>>>>>>> 8b6ff9c (Add missing unity meta files)
 AudioImporter:
   externalObjects: {}
   serializedVersion: 8

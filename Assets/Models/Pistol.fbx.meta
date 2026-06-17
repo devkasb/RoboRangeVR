@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 70eef7cdbd9ac344fb388f4d3b7b1c1d
+=======
+guid: 717d20355db9b45c7bf2b3b85f238d5f
+>>>>>>> 8b6ff9c (Add missing unity meta files)
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
