@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 55d7df7c961ccfc46bbad81b667f34ef
+=======
+guid: 4ee5aaf271cbc44ceb39e06deef2fb2f
+>>>>>>> 8b6ff9c (Add missing unity meta files)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
