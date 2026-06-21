@@ -1,6 +1,8 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
 
 public class WeaponShooter2 : MonoBehaviour
 {
@@ -13,6 +15,11 @@ public class WeaponShooter2 : MonoBehaviour
     public float range = 50f;
 
     public InputActionReference triggerAction;
+
+    public HapticImpulsePlayer hapticImpulsePlayer;
+    public float hapticIntensity = 0.5f;
+    public float hapticDuration = 0.1f;
+
 
     void OnEnable()
     {
@@ -38,6 +45,14 @@ public class WeaponShooter2 : MonoBehaviour
             AudioSource.PlayClipAtPoint(
                 shootSound,
                 firePoint.position
+            );
+        }
+
+        if (hapticImpulsePlayer != null)
+        {
+            hapticImpulsePlayer.SendHapticImpulse(
+                hapticIntensity,
+                hapticDuration
             );
         }
 
