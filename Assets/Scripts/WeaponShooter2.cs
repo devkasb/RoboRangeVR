@@ -92,6 +92,20 @@ public class WeaponShooter2 : MonoBehaviour
             {
                 resetGame.Hit();
             }
+
+            PlayMusic music = hit.collider.GetComponent<PlayMusic>();
+
+            if (music != null)
+            {
+                music.Hit();
+            }
+
+            ExitGame exit = hit.collider.GetComponent<ExitGame>();
+
+            if (exit != null)
+            {
+                exit.Hit();
+            }
         }
 
         if (shotLine != null)
