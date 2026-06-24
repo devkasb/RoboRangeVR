@@ -26,7 +26,7 @@ public class WeaponShooter2 : MonoBehaviour
 
     void Awake()
     {
-        grabInteractable = GetComponent<XRGrabInteractable>();
+        grabInteractable = GetComponentInParent<XRGrabInteractable>();
 
         if (grabInteractable != null)
         {
