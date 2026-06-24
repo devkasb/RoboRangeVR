@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class WeaponShooter2 : MonoBehaviour
 {
@@ -20,6 +21,20 @@ public class WeaponShooter2 : MonoBehaviour
     public float hapticIntensity = 0.5f;
     public float hapticDuration = 0.1f;
 
+    private XRGrabInteractable grabInteractable;
+    private bool isHeld = false;
+
+    void Awake()
+    {
+        grabInteractable = GetComponent<XRGrabInteractable>();
+
+        if (grabInteractable != null)
+        {
+            grabInteractable.selectEntered.AddListener(_ => isHeld = true);
+            grabInteractable.selectEntered.AddListener(_ => isHeld = false);
+        }
+    }
+
 
     void OnEnable()
     {
@@ -31,6 +46,11 @@ public class WeaponShooter2 : MonoBehaviour
 
     void Update()
     {
+        if (!isHeld)
+        {
+            return;
+        }
+
         if (triggerAction != null &&
             triggerAction.action.WasPressedThisFrame())
         {
@@ -122,9 +142,7 @@ public class WeaponShooter2 : MonoBehaviour
     {
         shotLine.enabled = true;
 
-        yield return new WaitForSeconds(
-            lineVisibleTime
-        );
+        yield return new WaitForSeconds(lineVisibleTime);
 
         shotLine.enabled = false;
     }
