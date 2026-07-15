@@ -13,6 +13,7 @@ UserSettings/
 *.slnx
 *.user
 *.userprefs
+*.lscache
 
 .DS_Store
 .vscode/
